@@ -2,7 +2,9 @@
     ViewData["Title"] = "Login";
 }
 
-<h3>Login</h3>
+<h3 class="PageHeader">Login</h3>
+<a href="/account/create">Need an account?</a>
+@Html.AntiForgeryToken()
 <input id="EmailAddressInput" >
 <input id="PasswordInput" >
 <button class="btn btn-success">Login</button>

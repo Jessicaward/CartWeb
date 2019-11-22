@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Create Account";
+}
+
+<h3 class="PageHeader">Create Account</h3>
+<a href="/account/login">Already got an account?</a>
+@Html.AntiForgeryToken()
+<input id="EmailAddressInput" >
+<input id="PasswordInput" >
+<button class="btn btn-success">Create Account</button>
+
+@section Scripts {
+    <script>
+        $(document).ready(function(e) {
+
+        });
+    </script>
+}

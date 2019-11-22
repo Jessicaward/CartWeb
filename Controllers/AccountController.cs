@@ -17,5 +17,24 @@ namespace CartWeb.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public IActionResult Login(string EmailAddress, string Password)
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public IActionResult Create(string EmailAddress)
+        {
+            return View();
+        }
+
     }
 }
