@@ -20,9 +20,6 @@ namespace CartWeb.Controllers
 
         public IActionResult Index()
         {
-            var manager = new CartManager();
-            var test = CartManager.GetBlah();
-            
             return View();
         }
 
