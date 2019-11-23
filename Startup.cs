@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
+using Ninject;
 
 namespace CartWeb
 {
@@ -19,6 +20,8 @@ namespace CartWeb
             Configuration = configuration;
         }
 
+        public IKernel Kernel { get; set; }
+        private object Resolve(Type type) => Kernel.Get(type);
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -26,6 +29,8 @@ namespace CartWeb
         {
             services.AddControllersWithViews();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            //todo: add service:
+            //services.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
